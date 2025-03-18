@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the getUserMediaSync function from the media_devices library, for the Dart programming language.">
+  <title>getUserMediaSync function - media_devices library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">tau_war</a></li>
+    <li><a href="../public_rust_third_party_web_audio_api_media_devices">public&#47;rust&#47;third_party&#47;web_audio_api&#47;media_devices.dart</a></li>
+    <li class="self-crumb">getUserMediaSync function</li>
+  </ol>
+  <div class="self-name">getUserMediaSync</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="public_rust_third_party_web_audio_api_media_devices&#47;public_rust_third_party_web_audio_api_media_devices-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-function">getUserMediaSync</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../public_rust_third_party_web_audio_api_media_streams/MediaStream-class.html">MediaStream</a></span>&gt;</span></span>
+<span class="name ">getUserMediaSync</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="getUserMediaSync-param-constraints"><span>required</span> <span class="type-annotation"><a href="../public_rust_third_party_web_audio_api_media_devices/MediaStreamConstraints-class.html">MediaStreamConstraints</a></span> <span class="parameter-name">constraints</span>, </span></li>
+</ol>})
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Prompt for permission to use a media input (audio only)</p>
+<p>This produces a <code>`MediaStream`</code> with tracks containing the requested types of media, which can
+be used inside a <a href="crate::node::MediaStreamAudioSourceNode"><code>MediaStreamAudioSourceNode</code></a>.</p>
+<p>It is okay for the <code>MediaStream</code> struct to go out of scope, any corresponding stream will still be
+kept alive and emit audio buffers. Call the <code>close()</code> method if you want to stop the media
+input and release all system resources.</p>
+<p>This function operates synchronously, which may be undesirable on the control thread. An async
+version is currently not implemented.</p>
+<h1 id="example">Example</h1>
+<pre class="language-no_run"><code class="language-no_run">use web_audio_api::context::{BaseAudioContext, AudioContext};
+use web_audio_api::context::{AudioContextLatencyCategory, AudioContextOptions};
+use web_audio_api::media_devices;
+use web_audio_api::media_devices::MediaStreamConstraints;
+use web_audio_api::node::AudioNode;
+
+let context = AudioContext::default();
+let mic = media_devices::get_user_media_sync(MediaStreamConstraints::Audio);
+
+// register as media element in the audio context
+let background = context.create_media_stream_source(&amp;mic);
+
+// connect the node directly to the destination node (speakers)
+background.connect(&amp;context.destination());
+
+// enjoy listening
+std::thread::sleep(std::time::Duration::from_secs(4));
+</code></pre>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;MediaStream&gt; getUserMediaSync({
+  required MediaStreamConstraints constraints,
+}) =&gt; RustLib.instance.api.webAudioApiMediaDevicesGetUserMediaSync(
+  constraints: constraints,
+);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">tau_war</a></li>
+    <li><a href="../public_rust_third_party_web_audio_api_media_devices">media_devices</a></li>
+    <li class="self-crumb">getUserMediaSync function</li>
+</ol>
+
+    <h5>media_devices library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    tau_war
+      0.0.1
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

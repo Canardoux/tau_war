@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="tau_war API docs, for the Dart programming language.">
+  <title>tau_war - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">tau_war package</li>
+  </ol>
+  <div class="self-name">tau_war</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <p><img src="https://img.shields.io/pub/v/tauwar.svg?style=flat-square" alt="pub version">
+<img src="https://tauwar.canardoux.xyz/images/TauwarBanner.png" alt="Tauweb"></p>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li>
+<h2 id="etau-user--your-doc-is-herehttpsetaucanardouxxyz">Etau user : your doc <a href="https://etau.canardoux.xyz/">is here</a></h2>
+</li>
+<li>
+<h2 id="the-changelog-is-herehttpsetaucanardouxxyztauchangeloghtml">The CHANGELOG <a href="https://etau.canardoux.xyz/tau/CHANGELOG.html">is here</a></h2>
+</li>
+</ul>
+<h2 id="tauwar-stands-for-ukraine">Tauwar stands for Ukraine!</h2>
+<p><img src="https://etau.canardoux.xyz/images/2-year-old-irish-girl-ukrainian.jpg" alt="PeaceForUkraine">
+Peace for Ukraine</p>
+<p><img src="https://etau.canardoux.xyz/images/banner.png" alt="PrayForUkraine">
+Pray for Ukraine</p>
+<h1 id="tauwar">Tauwar</h1>
+<p><code>Tauwar</code> is an <a href="https://pub.dev/packages/etau">Etau</a> implementation for Flutter on mobiles.</p>
+<p><a href="https://pub.dev/packages/etau">Etau</a> is the interface and this is what see the App.
+So, there are not many things to say about <code>Tauwar</code> because this is just an implementation.
+The only verb used by the App is <code>tau()</code>, which gives the implementation.</p>
+<p>You can see all the <a href="https://etau.canardoux.xyz/">Etau project documentation</a> here.</p>
+<p>Example</p>
+<pre class="language-dart"><code class="language-dart">import 'package:etau/etau.dart';
+import 'package:tau_war/tau_war.dart';
+
+  @override
+  void initState() 
+  {
+        super.initState();
+        tau().init().then 
+        ((e){
+                audioCtx = tau().newAudioContext();
+        });
+  }
+
+  ...
+        // Then all the code depends only on the interface (`etau`)
+        dest = audioCtx.destination;
+        source = audioCtx.createBufferSource();
+        source!.buffer = audioBuffer;
+        pannerNode = audioCtx.createStereoPanner();
+        pannerNode!.pan.value = pannerValue;
+        source!.connect(pannerNode!).connect(dest!);
+
+</code></pre>
+<p>if your App needs to support at the same time Flutter Web And Flutter on mobiles:</p>
+<pre class="language-dart"><code class="language-dart">import 'package:etau/etau.dart';
+import 'package:etau/dummy.dart'
+  if (dart.library.js_interop) 'package:tau_web/tau_web.dart'
+  if (dart.library.io) 'package:tau_war/tau_war.dart';
+
+  @override
+  void initState() 
+  {
+        super.initState();
+        tau().init().then 
+        ((e){
+                audioCtx = tau().newAudioContext();
+        });
+  }
+</code></pre>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="main">
+  <span class="name"><a href="main">main</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="simple">
+  <span class="name"><a href="public_rust_api_simple">public/rust/api/simple</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="frb_generated">
+  <span class="name"><a href="public_rust_frb_generated">public/rust/frb_generated</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="frb_generated.io">
+  <span class="name"><a href="public_rust_frb_generated.io">public/rust/frb_generated.io</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="frb_generated.web">
+  <span class="name"><a href="public_rust_frb_generated.web">public/rust/frb_generated.web</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="lib">
+  <span class="name"><a href="public_rust_lib">public/rust/lib</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="web_audio_api">
+  <span class="name"><a href="public_rust_third_party_web_audio_api">public/rust/third_party/web_audio_api</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="context">
+  <span class="name"><a href="public_rust_third_party_web_audio_api_context">public/rust/third_party/web_audio_api/context</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="online">
+  <span class="name"><a href="public_rust_third_party_web_audio_api_context_online">public/rust/third_party/web_audio_api/context/online</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="media_devices">
+  <span class="name"><a href="public_rust_third_party_web_audio_api_media_devices">public/rust/third_party/web_audio_api/media_devices</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="media_recorder">
+  <span class="name"><a href="public_rust_third_party_web_audio_api_media_recorder">public/rust/third_party/web_audio_api/media_recorder</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="media_streams">
+  <span class="name"><a href="public_rust_third_party_web_audio_api_media_streams">public/rust/third_party/web_audio_api/media_streams</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="node">
+  <span class="name"><a href="public_rust_third_party_web_audio_api_node">public/rust/third_party/web_audio_api/node</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="analyser">
+  <span class="name"><a href="public_rust_third_party_web_audio_api_node_analyser">public/rust/third_party/web_audio_api/node/analyser</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="worklet">
+  <span class="name"><a href="public_rust_third_party_web_audio_api_worklet">public/rust/third_party/web_audio_api/worklet</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="tau_war">
+  <span class="name"><a href="tau_war">tau_war</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="tau_war_bindings_generated">
+  <span class="name"><a href="tau_war_bindings_generated">tau_war_bindings_generated</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li class="self-crumb">tau_war package</li>
+</ol>
+
+    <h5 class="hidden-xs"><span class="package-name">tau_war</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="main">main</a></li>
+      <li><a href="public_rust_api_simple">public/rust/api/simple</a></li>
+      <li><a href="public_rust_frb_generated">public/rust/frb_generated</a></li>
+      <li><a href="public_rust_frb_generated.io">public/rust/frb_generated.io</a></li>
+      <li><a href="public_rust_frb_generated.web">public/rust/frb_generated.web</a></li>
+      <li><a href="public_rust_lib">public/rust/lib</a></li>
+      <li><a href="public_rust_third_party_web_audio_api">public/rust/third_party/web_audio_api</a></li>
+      <li><a href="public_rust_third_party_web_audio_api_context">public/rust/third_party/web_audio_api/context</a></li>
+      <li><a href="public_rust_third_party_web_audio_api_context_online">public/rust/third_party/web_audio_api/context/online</a></li>
+      <li><a href="public_rust_third_party_web_audio_api_media_devices">public/rust/third_party/web_audio_api/media_devices</a></li>
+      <li><a href="public_rust_third_party_web_audio_api_media_recorder">public/rust/third_party/web_audio_api/media_recorder</a></li>
+      <li><a href="public_rust_third_party_web_audio_api_media_streams">public/rust/third_party/web_audio_api/media_streams</a></li>
+      <li><a href="public_rust_third_party_web_audio_api_node">public/rust/third_party/web_audio_api/node</a></li>
+      <li><a href="public_rust_third_party_web_audio_api_node_analyser">public/rust/third_party/web_audio_api/node/analyser</a></li>
+      <li><a href="public_rust_third_party_web_audio_api_worklet">public/rust/third_party/web_audio_api/worklet</a></li>
+      <li><a href="tau_war">tau_war</a></li>
+      <li><a href="tau_war_bindings_generated">tau_war_bindings_generated</a></li>
+</ol>
+
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+</main>
+<footer>
+  <span class="no-break">
+    tau_war
+      0.0.1
+  </span>
+  
+</footer>
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+PODS:
+  - Flutter (1.0.0)
+  - rust_lib_tau_war (0.0.1):
+    - Flutter
+  - tau_war (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - rust_lib_tau_war (from `.symlinks/plugins/rust_lib_tau_war/ios`)
+  - tau_war (from `.symlinks/plugins/tau_war/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  rust_lib_tau_war:
+    :path: ".symlinks/plugins/rust_lib_tau_war/ios"
+  tau_war:
+    :path: ".symlinks/plugins/tau_war/ios"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  rust_lib_tau_war: 89dcdebc321a509b9746a59c1caf5c94894049fc
+  tau_war: 84f962880737b4de496904a39f46f8f13f376b1e
+
+PODFILE CHECKSUM: 4305caec6b40dde0ae97be1573c53de1882a07e5
+
+COCOAPODS: 1.16.2
