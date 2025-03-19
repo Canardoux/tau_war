@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  tau_war:
+  tau_war: # 
     # When depending on this package from a real application you should use:
     #   tau_war: ^x.y.z
     # See https://dart.dev/tools/pub/dependencies#version-constraints
