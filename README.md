@@ -6,7 +6,7 @@
 - ## Etau user : your doc [is here](https://etau.canardoux.xyz/)
 - ## The CHANGELOG [is here](https://etau.canardoux.xyz/tau/CHANGELOG.html)
 
-## Tauwar stands for Ukraine!
+## Tauwar stands with Ukraine!
 
 ![PeaceForUkraine](https://etau.canardoux.xyz/images/2-year-old-irish-girl-ukrainian.jpg)
 Peace for Ukraine
