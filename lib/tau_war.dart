@@ -5,6 +5,17 @@ import 'dart:isolate';
 
 import 'tau_war_bindings_generated.dart';
 
+import 'package:etau/etau.dart' show TauInterface;
+import 'src/tauweb_implementation.dart' show TauwebImplementation;
+//import 'src/tauweb_implementation.dart' show TauwebJS;
+
+/// This is the handle to get this `Etau` implementation.
+TauInterface tau() => TauwebImplementation();
+
+/// I do not remember what it is for !
+/// @nodoc
+//TauwebJS tauwebJS() => TauwebJS();
+
 /// A very short-lived native function.
 ///
 /// For very short-lived functions, it is fine to call them on the main isolate.

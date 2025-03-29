@@ -1477,6 +1477,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "rust_lib_tau_war"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "cpal",
+ "delegate-attr",
+ "env_logger 0.11.5",
+ "extend",
+ "flutter_logger",
+ "flutter_rust_bridge",
+ "futures",
+ "lazy_static",
+ "log",
+ "parking_lot 0.12.3",
+ "paste",
+ "simple-log",
+ "sink",
+ "trace",
+ "web-audio-api",
+]
+
+[[package]]
 name = "rustc-demangle"
 version = "0.1.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1828,28 +1850,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
-]
-
-[[package]]
-name = "tau"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "cpal",
- "delegate-attr",
- "env_logger 0.11.5",
- "extend",
- "flutter_logger",
- "flutter_rust_bridge",
- "futures",
- "lazy_static",
- "log",
- "parking_lot 0.12.3",
- "paste",
- "simple-log",
- "sink",
- "trace",
- "web-audio-api",
 ]
 
 [[package]]
