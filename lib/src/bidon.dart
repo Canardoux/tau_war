@@ -88,6 +88,8 @@ class IIRFilterOptions {
     required t.TauArray<t.TauNumber> feedforward,
     required t.TauArray<t.TauNumber> feedback,
     });
+  
+  
 }
 
 class MediaElementAudioSourceOptions {
@@ -131,4 +133,14 @@ class MediaRecorderOptions {
 
 class HTMLAudioElement {
    
+}
+
+class AudioWorklet {
+
+}
+
+class AudioTimestamp {
+   /* ctor */ AudioTimestamp({t.TauHighResTimeStamp? contextTime, t.TauHighResTimeStamp? performanceTime});
+  double contextTime;
+  double performanceTime;
 }
